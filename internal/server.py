@@ -24,6 +24,12 @@ import threading
 # default to backing up JSON files.
 autosave = True
 
+dir_path = os.getcwd()
+if "internal" in dir_path:
+    print("Running jade from", dir_path)
+    print("ERROR: please run jade from the root of the jade directory. NOT in internal/")
+    exit()
+
 jsonfile = input("Enter the name of the json file to use (leave blank for default 'labs.json'): ")
 if jsonfile == '': jsonfile = 'labs.json'
 
