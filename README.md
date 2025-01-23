@@ -1,13 +1,19 @@
 Using Jade
 =====
 
-To run the server, simply type:
+To run the server, simply type into your terminal:
 ```
 python internal/server.py
 ```
 
-You MUST be located in the ROOT of the jade folder.
-(type `pwd` to check where your terminal is!)
+You MUST be located in the ROOT of the jade folder, and run the above python command exactly as written.
+
+**Tips on How to Use the Terminal**
+- if you have never used the terminal on your computer, read [this section of UnderTheCovers](https://cs-210-infrastructure.github.io/UndertheCovers/lecturenotes/unix/L02.html#navigating-and-working-with-the-file-system).
+- use `pwd` to check your current location, (before running jade, you should see the path of your jade folder, like `/home/annaad/Documents/bu/cs210/jade`)
+- if you are in the wrong location, type `ls` to see all folders and files in your current directory
+- type `cd` to change directory. for example, type `cd Documents` to go from `/home/annaad/` to `/home/annaad/Documents`
+    - you can also type an absolute path like `cd /home/annaad/Documents/bu/cs210/jade` to navigate to the jade folder in one command
 
 If you have python3 on your machine, run:
 ```
@@ -17,17 +23,22 @@ python3 internal/server.py
 
 Python 3.13
 =====
+If you have the latest version of python, you will need to install the legacy-cgi python package.
+
+```
+pip install legacy-cgi
+```
+You may also need to type `pip3` instead of `pip` depending on your system.
+
+If you are unfamiliar with pip, try the provided solution below.
 (This only works on MAC or Linux)
 
 Since python3.13, the following Makefile support was added (for the cgi package).
-
 Run as follows:
+- `make setup-py3` : upon installation of jade
+- `make run-py3` : to start up the jade server
 
-`make setup-py3` : upon installation of jade
-
-`make run-py3` : to start up the jade server
-
-Old Instructions
+Complete Instructions
 =====
 
 The Jade schematic entry and simulation tool is a work in progress,
